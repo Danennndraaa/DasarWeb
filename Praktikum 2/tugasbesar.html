@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Besar HTML FORM</title>
+    <style>
+        fieldset {
+            border: 2px solid black;
+            padding: 10px;
+            width: 1080;
+        }
+        legend {
+            font-weight: bold;
+        }
+        .container{
+            text-align: center;
+            margin-top: 20px;
+        }
+        input[type="submit"]{
+            display: inline-block;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <fieldset>
+        <legend>Data Mahasiswa</legend>
+        <p>Nama <input type="text"></p>
+        <p>Alamat <input type="text"></p>
+        <p>Tanggal Lahir <input type="date"></p>
+        <p>Jenis Kelamin <select><option value="Laki-Laki" selected>Laki-Laki</option><option value="perempuan">Perempuan</option></select>
+        </p>
+        <p>Alamat</p>
+        <textarea></textarea>
+    </fieldset>
+
+    <fieldset>
+        <legend>Komentar</legend>
+        <p>Darimana Anda mengetahui buku ini <select><option value="Google" selected>Google</option><option value="iklan">iklan</option></select><br><br>
+        <p>Bagaimana Menurut anda terhadap buku ini?</p>
+        <input type="radio"> Biasa
+        <input type="radio"> Bagus
+        <input type="radio"> Menarik
+        <br>
+        <p>Komentar Anda:</p>
+        <textarea name="" id=""></textarea>
+        <br>
+        <input type="checkbox" checked>Kirim ke email bila ada info terbaru
+    </fieldset>
+        <br>
+        <div class="container">
+            <form action="#">
+                <input type="submit" value="Kirim">
+            </form>
+        </div>
+</body>
+</html>
