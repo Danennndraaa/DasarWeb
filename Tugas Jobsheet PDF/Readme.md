@@ -1,1 +1,1 @@
-Tugas Dikumpulkan di GitHub Karena LMS masih Terkunci, Terimakasih.
+Tugas Dikumpulkan di GitHub untuk Backup LMS, Terimakasih.
