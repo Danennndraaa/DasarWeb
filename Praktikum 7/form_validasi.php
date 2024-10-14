@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Form Input dengan Validasi</title>
+        <title>Form Input Validasi Dengan AJAX</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
     </head>
     <body>
-        <h1>Form Input dengan Validasi</h1>
+        <h1>Form Input Validasi Dengan AJAX</h1>
         <form id="myForm" method="post" action="proses_validasi.php">
             <label for="nama">Nama:</label>
             <input type="text" id="nama" name="nama">
@@ -18,9 +18,12 @@
             <input type="submit" value="submit">
         </form>
 
+        <div id="hasil"></div>
+
         <script>
              $(document).ready(function() {
             $("#myForm").submit(function(event) {
+                event.preventDefault();
                 var nama = $("#nama").val();
                 var email = $("#email").val();
                 var valid = true;
@@ -39,8 +42,21 @@
                     $("#email-error").text("");
                 }
 
-                if (!valid) {
-                    event.preventDefault();
+                if (valid) {
+                    $.ajax({
+                        url: "proses_validasi.php",
+                        type: "POST",
+                        data: {
+                            nama: nama,
+                            email: email
+                        },
+                        success: function(response) {
+                            $("#hasil").html(response);
+                        },
+                        error: function() {
+                            $("#hasil").html("Terjadi kesalahan saat mengirim data.");
+                        }
+                    });
                 }
             });
         });
