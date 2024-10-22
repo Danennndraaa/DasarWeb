@@ -367,14 +367,12 @@ body {
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
 
-                <!-- Tombol Scroll to Top -->
+
                 <a href="#" class="btn btn-primary scroll-to-top" id="scrollToTop">
                     <i class="fa fa-chevron-up"></i>
                 </a>
                 
-                <!-- Script untuk Scroll to Top -->
                 <script>
-                    // Menampilkan tombol saat scroll ke bawah
                     window.onscroll = function () {
                         const button = document.getElementById('scrollToTop');
                         if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
@@ -384,7 +382,6 @@ body {
                         }
                     };
 
-                    // Mengatur scroll ke atas saat tombol diklik
                     document.getElementById('scrollToTop').onclick = function () {
                         window.scrollTo({ top: 0, behavior: 'smooth' });
                     };
