@@ -1,5 +1,5 @@
 <?php
-$targetDirectory = "documents/";
+$targetDirectory = "multiimage/";
 
 if (!file_exists($targetDirectory)) {
     mkdir($targetDirectory, 0777, true);
@@ -13,11 +13,11 @@ if ($_FILES['files']['name'][0]) {
         $targetFile = $targetDirectory . $fileName;
 
         if (move_uploaded_file($_FILES['files']['tmp_name'][$i], $targetFile)) {
-            echo "File $fileName berhasil diunggah.<br>";
+            echo "Gambar $fileName berhasil diunggah.<br>";
         } else {
-            echo "Gagal mengunggah file $fileName.<br>";
+            echo "Gagal mengunggah Gambar $fileName.<br>";
         }
     }
 } else {
-    echo "Tidak ada file yang diunggah.";
+    echo "Tidak ada Gambar yang diunggah.";
 }
